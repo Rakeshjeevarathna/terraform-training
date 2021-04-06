@@ -7,6 +7,12 @@ resource "aws_instance" "myec2" {
   }
 }
 
+
+
+resource "aws_s3_bucket" "appbucket" {
+    bucket = "epsilontraining3"
+}
+
 output "myec2ipaddress" {
   value = aws_instance.myec2[*].public_ip
 }
